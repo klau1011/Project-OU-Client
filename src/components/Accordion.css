@@ -1,0 +1,107 @@
+body {
+  font-size: 16px;
+  min-height: 100%;
+}
+
+.accordion-item.collapsed {
+    display: none;
+   
+  }
+  
+  .accordion-item.expanded {
+    display: block;
+    
+  }
+ 
+  .accordion-button {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 7px;
+    gap: 8px;
+    border: none;
+
+width: 1052px;
+height: 75px;
+
+ background: #D3D3D3;
+ 
+
+/* Shadow-S */
+
+/* border-bottom: 2px solid black;
+border-top: 2px solid black; */
+
+    
+  }
+
+  .dropContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  /* identical to box height, or 122% */
+
+  letter-spacing: -0.02em;
+
+  color: #000000;
+  }
+
+  .accordion-button > img {
+    position: absolute;
+    right: 20px;
+  width: 30px;
+  height: 30px;
+  }
+
+    .ans {
+      width: 1052px;
+
+    margin: 25px 0;
+    padding: 20px;
+  
+
+
+    
+
+  }
+
+  .accordion-button {
+    cursor: pointer;
+    margin: auto;
+    
+ 
+
+  }
+  .wrapper {
+
+    margin: 30px 0 0 0 ;
+    position: relative;
+    background: #fff;
+    box-shadow: 0px 2px 4px -2px rgba(8, 14, 26, 0.06), 0px 4px 8px -2px rgba(6, 12, 22, 0.1);
+
+  
+  
+
+  
+
+    
+  }
+
+  .accordion-button > h3 {
+    font-weight:normal;
+    font-family: 'Inter', sans-serif;
+    margin: auto;
+    
+  }
+
+

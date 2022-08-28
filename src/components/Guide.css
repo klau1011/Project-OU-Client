@@ -1,0 +1,67 @@
+
+body{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+.blog-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: relative;
+    color: #404040;
+    width: 650px;
+    margin: auto auto 100px auto;
+    
+}
+
+#intro-par{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 28px;
+color: #404040;
+
+
+}
+#blog-title{
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 800;
+font-size: 32px;
+line-height: 44px;
+/* or 122% */
+
+text-align: center;
+letter-spacing: -0.02em;
+
+color: #171717;
+width: 800px;
+
+
+}
+
+.body-text{
+    display: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 50px 0;
+    
+}
+
+h3{
+    margin: 30px 0 20px 0;
+    color: #171717;
+
+}
+li{
+    margin: 0 0 15px 0;
+}

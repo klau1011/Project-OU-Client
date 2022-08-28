@@ -1,0 +1,148 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+h1 {
+    margin: 0 0 30px 0;
+}
+
+#search-bar {
+    position: absolute;
+    left: 305px;
+    margin: 0 auto;
+    width: 490px;
+    height: 45px;
+    padding: 0 20px;
+    border: 1px solid #D0CFCE;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+
+}
+.search-container{
+    position: relative;
+    width: 1100px;
+  margin: 0 0 60px 0;
+  display: flex;
+}
+
+.cards{
+    display: grid;
+    width: 70%;
+    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 50px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.applicant-card {
+    text-align: center;
+    padding: 20px;
+    width: 350px;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: #C1E1C1;
+  
+  }
+
+#school {
+    font-weight: 400;
+    color: #737373;
+}
+
+#average {
+    font-weight: 400;
+}
+
+.uni-select{
+    position: absolute;
+    right: 0px;
+}
+
+:root {
+    --background-gradient: linear-gradient(30deg, #f39c12 30%, #f1c40f);
+    --gray: #34495e;
+    --darkgray: peachpuff;
+  }
+  
+  select {
+    font-family: 'Inter', sans-serif;
+
+    /* Reset Select */
+    appearance: none;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    /* Personalize */
+    flex: 1;
+    padding: 13px 16px;
+    color: black;
+    background-color: var(--darkgray);
+    background-image: none;
+    cursor: pointer;
+
+  }
+  /* Remove IE arrow */
+  select::-ms-expand {
+    display: none;
+  }
+  /* Custom Select wrapper */
+  .uni-select {
+    right: 0px;
+    position: absolute;
+    display: flex;
+    width: 150px;
+    height: 3em;
+    border-radius: .25em;
+    overflow: hidden;
+  }
+  /* Arrow */
+  .select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1em;
+    background-color: black;
+    transition: .25s all ease;
+    pointer-events: none;
+  }
+  /* Transition */
+  .select:hover::after {
+    color: #f39c12;
+  }
+
+  .arrow {
+    position: absolute;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    right: 15px;
+    top: 40%;
+
+  }
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+
+  .display-avg{
+    display: flex;
+  }
+
+  #avg{
+    color: green;
+  }

@@ -1,0 +1,9 @@
+p{
+    color: #404040;
+}
+
+ li > a {
+        text-decoration: none;
+        border-bottom: #EA215A 0.125em solid;
+      }
+
