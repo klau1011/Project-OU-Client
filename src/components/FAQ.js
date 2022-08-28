@@ -1,3 +1,4 @@
+import React from 'react'
 import Accordion from './Accordion'
 import AccordionItem from './AccordionItem'
 import './Accordion.css'
@@ -14,7 +15,7 @@ function FAQ() {
 <div className="horizontal-bar"></div>
 <div className="dropContainer">
 <h1 id="faq">FAQ</h1>
-<Accordion  defaultIndex="1" onItemClick={console.log}>
+<Accordion  defaultIndex="1" onItemClick={console.log('')}>
     <AccordionItem label="When can I start applying?" index="1">
     Your school will you a code to register an account to OUAC. You can expect it by the end of November, but usually between late October to early November.
     </AccordionItem>

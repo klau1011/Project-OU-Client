@@ -4,10 +4,10 @@ import AccordionItem from './AccordionItem'
 import './Accordion.css'
 
 
-const Accordion = ({ defaultIndex, onItemClick, children }) => {
+function Accordion ({ defaultIndex, onItemClick, children }) {
     const [bindIndex, setBindIndex] = useState(defaultIndex);
   
-    const changeItem = itemIndex => {
+    const changeItem = (itemIndex) => {
       if (typeof onItemClick === 'function') onItemClick(itemIndex);
       if (itemIndex !== bindIndex) setBindIndex(itemIndex);
     };
@@ -15,7 +15,7 @@ const Accordion = ({ defaultIndex, onItemClick, children }) => {
   
     return (
       <>
-        {items.map(({ props }) => (
+        {items.map(({props}) => (
           <AccordionItem
             isCollapsed={bindIndex !== props.index}
             label={props.label}
