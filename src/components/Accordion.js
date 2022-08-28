@@ -1,10 +1,11 @@
 import React from 'react'
+import {useState} from 'react'
 import AccordionItem from './AccordionItem'
 import './Accordion.css'
 
 
 const Accordion = ({ defaultIndex, onItemClick, children }) => {
-    const [bindIndex, setBindIndex] = React.useState(defaultIndex);
+    const [bindIndex, setBindIndex] = useState(defaultIndex);
   
     const changeItem = itemIndex => {
       if (typeof onItemClick === 'function') onItemClick(itemIndex);
