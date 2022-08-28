@@ -4,27 +4,23 @@ import AccordionItem from './AccordionItem'
 import './Accordion.css'
 
 
-function Accordion ({ defaultIndex, onItemClick, children }) {
-    const [bindIndex, setBindIndex] = useState(defaultIndex);
-  
-    const changeItem = (itemIndex) => {
-      if (typeof onItemClick === 'function') onItemClick(itemIndex);
-      if (itemIndex !== bindIndex) setBindIndex(itemIndex);
-    };
-    const items = children.filter(item => item.type.name === 'AccordionItem');
-  
-    return (
-      <>
-        {items.map(({props}) => (
-          <AccordionItem
-            isCollapsed={bindIndex !== props.index}
-            label={props.label}
-            handleClick={() => changeItem(props.index)}
-            children={props.children}
-          />
-        ))}
-      </>
-    );
-  };
 
-  export default Accordion;
+
+const Accordion = ({ title, content }) => {
+  const [isActive, setIsActive] = useState(false);
+
+  return (
+    <div className="accordion-item">
+      <div className="accordion-title" onClick={() => setIsActive(!isActive)}>
+        <div>{title}</div>
+        <div>{isActive ? '-' : '+'}</div>
+      </div>
+      <div className='wrapper'>
+      {isActive && <div className="accordion-content">{content}</div>}
+      </div>
+    </div>
+  );
+};
+
+export default Accordion;
+
