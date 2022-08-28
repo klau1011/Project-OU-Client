@@ -27,3 +27,9 @@ body {
     align-items: center;
 }
 
+p > a{
+    color: #737373;
+}
+p > a:hover{
+    color: whitesmoke;
+}
