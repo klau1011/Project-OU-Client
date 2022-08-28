@@ -1,6 +1,6 @@
 
 
-const AccordionItem = ({ label, isCollapsed, handleClick, children }) => {
+function AccordionItem  ({ label, isCollapsed, handleClick, children })  {
     return (
       <>
       <div className="wrapper">
