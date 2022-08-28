@@ -10,9 +10,10 @@ function ApplicantsData() {
   const [search, setSearch] = useState('')
   const [dropSearch, setDropSearch] = useState('UofT')
 
+  // http://localhost:3001/ApplicantData
 
   useEffect(() => {
-    Axios.get(`http://localhost:3001/ApplicantData`)
+    Axios.get(`https://project-ou.herokuapp.com/applicantData`)
     .then((res) => setListOfUsers(res.data))
   })
 
