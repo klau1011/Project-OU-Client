@@ -1,1 +1,1 @@
-project-ou-client.vercel.app
+https://project-ou-client.vercel.app/
