@@ -1,7 +1,9 @@
 {
-  "name": "client",
+  "name": "project-ou",
   "version": "0.1.0",
   "private": true,
+  "description": "Provide information to Ontario High School Seniors",
+  "author": "Kevin L",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
