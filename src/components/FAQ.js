@@ -1,6 +1,5 @@
 import React from 'react'
 import Accordion from './Accordion'
-import AccordionItem from './AccordionItem'
 import './Accordion.css'
 import { accordionData } from './AccordionData.js';
 

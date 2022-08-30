@@ -1,10 +1,6 @@
 import React from 'react'
 import {useState} from 'react'
-import AccordionItem from './AccordionItem'
 import './Accordion.css'
-
-
-
 
 const Accordion = ({ title, content }) => {
   const [isActive, setIsActive] = useState(false);

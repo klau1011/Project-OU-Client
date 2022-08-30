@@ -1,4 +1,3 @@
-import Hero from './Hero'
 import {BrowserRouter as Routes, Router, Route, Link} from 'react-router-dom'
 import '../index.css'
 
