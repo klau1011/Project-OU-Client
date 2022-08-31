@@ -49,3 +49,9 @@
     font-size: 50px;
     margin-bottom: 20px;
 }
+
+#notebook{
+    position: absolute;
+    right: 500px;
+    top: 125px;
+}

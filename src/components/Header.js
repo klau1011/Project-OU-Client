@@ -6,14 +6,14 @@ import '../index.css'
   
 <>
   
-    <title>Home | Project X</title>
+    <title>Home | Project OU</title>
 
     <nav>
 
         <div className="nav-wrapper">
             
             <div className="nav-logo">
-            <Link to="/"><img src="https://cdn.discordapp.com/attachments/715319623637270638/959944688582950912/unknown_2.png.png"/></Link>
+            <Link to="/"><img src="https://cdn.discordapp.com/attachments/832303072645742632/1014329222027808828/0BB23037-2FB1-4F48-B2D5-97883D531F72_4_5005_c-removebg-preview.png"/></Link>
             </div>
 
             <div className="nav-links">
