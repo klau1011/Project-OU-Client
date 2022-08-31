@@ -2,7 +2,7 @@
 .grid-container {
     display: flex;
     flex-direction: column;
-    margin: auto;
+    margin: 0px auto auto auto;
     max-width: 2000px;
 }
 .grid {
@@ -53,5 +53,5 @@
 #notebook{
     position: absolute;
     right: 500px;
-    top: 125px;
+    top: 120px;
 }
