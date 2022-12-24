@@ -1,3 +1,5 @@
+// q and a's
+
 export const accordionData = [
     {
       title: 'When can I start applying?',

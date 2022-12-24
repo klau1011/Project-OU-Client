@@ -1,6 +1,7 @@
 import React from 'react'
 import './ApplicantsData.css'
 
+// individual applicant card
 function Applicant({applicantInfo}) {
   return (
     <>

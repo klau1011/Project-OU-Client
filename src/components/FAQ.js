@@ -3,6 +3,7 @@ import Accordion from './Accordion'
 import './Accordion.css'
 import { accordionData } from './AccordionData.js';
 
+// faq page
 function FAQ() {
   return (
     <>

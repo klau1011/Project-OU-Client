@@ -3,6 +3,7 @@ import './Resources.css'
 import Footer from './Footer.js'
 
 
+// resources page 
 function Resources() {
   return (
 

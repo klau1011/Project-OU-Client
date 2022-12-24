@@ -1,5 +1,6 @@
 import React from 'react'
 
+// hero
  function Hero() {
   return (
       <>

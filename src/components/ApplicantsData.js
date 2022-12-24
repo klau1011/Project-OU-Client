@@ -3,7 +3,7 @@ import Axios from 'axios'
 import './ApplicantsData.css'
 import Applicant from './Applicant'
 
-
+// applicant data page 
 function ApplicantsData() {
 
   const [listOfUsers, setListOfUsers] = useState([])
@@ -12,6 +12,7 @@ function ApplicantsData() {
 
   // http://localhost:3001/ApplicantData
 
+  // fetch data from api
   useEffect(() => {
     Axios.get(`https://projectou.herokuapp.com/applicantData`)
     .then((res) => setListOfUsers(res.data))
@@ -20,6 +21,7 @@ function ApplicantsData() {
 
   let filteredOnce = listOfUsers
 
+  // filtered by uni data
   if(dropSearch === 'UofT'){
     filteredOnce = listOfUsers.filter((user) => user.School.toLowerCase().includes(['toronto']) ||user.School.toLowerCase().includes(['uoft']) )
   }
@@ -53,12 +55,13 @@ function ApplicantsData() {
 
   }
 
-
+// filtered by user's dynamic search 
   const filteredListOfUsers = filteredOnce.filter((user) => user.Program.toLowerCase().includes(search.toLowerCase()) && parseFloat(user.Average) <= 100)
 
     let sum = 0;
     let num = 0;
 
+    // calculate the overall average for the program
     filteredListOfUsers.forEach((user) => {
     if(!isNaN(parseFloat(user.Average))){
       sum += parseFloat(user.Average)

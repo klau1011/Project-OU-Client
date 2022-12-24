@@ -6,6 +6,7 @@ import '../index.css'
   
 <>
   
+  {/* header on each page */}
     <title>Home | Project OU</title>
 
     <nav>

@@ -1,6 +1,7 @@
 import React from 'react'
 import {BrowserRouter as Router, Route, Routes, Link} from'react-router-dom'
 
+// import all components
 import {useEffect} from 'react'
 import Header from './components/Header.js'
 import Grid from './components/Grid.js'
@@ -10,6 +11,7 @@ import Guide from './components/Guide.js'
 import Resources from './components/Resources.js'
 import Footer from './components/Footer.js'
 
+// change website title
 function App() {
   useEffect(() => {
     document.title = "Project OU"
@@ -20,6 +22,7 @@ function App() {
    <Header />
 
 <Routes>
+  {/* routes to different webpages */}
   <Route path="/" element={<Grid />} />
   <Route path="/resources" element={<Resources />}/>
   <Route path="/22ApplicantsData" element={<ApplicantsData />}></Route>
