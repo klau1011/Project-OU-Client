@@ -13,7 +13,7 @@ function ApplicantsData() {
   // http://localhost:3001/ApplicantData
 
   useEffect(() => {
-    Axios.get(`https://project-ou.herokuapp.com/applicantData`)
+    Axios.get(`https://projectou.herokuapp.com/applicantData`)
     .then((res) => setListOfUsers(res.data))
   })
 
