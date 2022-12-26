@@ -3,14 +3,7 @@ import {BrowserRouter as Router, Route, Routes, Link} from'react-router-dom'
 
 // import all components
 import {useEffect} from 'react'
-import Header from './components/Header.js'
-import Grid from './components/Grid.js'
-import FAQ from './components/FAQ.js'
-import ApplicantsData from './components/ApplicantsData.js'
-import Guide from './components/Guide.js'
-import Resources from './components/Resources.js'
-import Footer from './components/Footer.js'
-
+import {Header, Grid, FAQ, ApplicantsData, Guide, Resources, Footer} from './components'
 // change website title
 function App() {
   useEffect(() => {
