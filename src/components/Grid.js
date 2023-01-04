@@ -12,7 +12,7 @@ function Grid() {
       path: '/resources',
       className: 'Course-Resources',
       image: 'https://cdn.discordapp.com/attachments/715319623637270638/959947930566025256/unknown.png',
-      title: 'Courses ',
+      title: 'Resources ',
       text: 'University/OSSD Resources'
     },
 
