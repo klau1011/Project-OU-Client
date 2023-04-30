@@ -20,18 +20,9 @@ body {
     padding: 0px 7px;
     gap: 8px;
     border: none;
-
-width: 1052px;
-height: 75px;
-
- background: #D3D3D3;
-
-/* Shadow-S */
-
-/* border-bottom: 2px solid black;
-border-top: 2px solid black; */
-
-    
+    width: 1052px;
+    height: 75px;
+    background: #D3D3D3;
   }
 
   .dropContainer {
@@ -69,9 +60,6 @@ border-top: 2px solid black; */
   .accordion-title {
     cursor: pointer;
     margin: auto;
-    
- 
-
   }
   .wrapper {
     margin: 10px;
