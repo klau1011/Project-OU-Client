@@ -108,7 +108,7 @@ function ApplicantsData() {
           <h4 id="avg"> {!isNaN(avg) ? Math.round(avg * 100) / 100 : ""}</h4>
         </div>
         {/* display count */}
-        <h6>Count: {!isNaN(avg) ? num : ""}</h6>
+        <h6>Count: {!isNaN(avg) && num}</h6>
         {filteredListOfUsers.length < 1 && search === "" ? (
           <p>Loading data...</p>
         ) : (
