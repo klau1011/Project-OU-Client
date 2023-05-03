@@ -1,5 +1,4 @@
 import GridElements from "./GridElements";
-import Hero from "./Hero";
 import "../home.css";
 import "../index.css";
 
