@@ -15,7 +15,7 @@ function ApplicantsData() {
 
   // fetch data from backend api end point
   useEffect(() => {
-    Axios.get(`https://projectou.herokuapp.com/applicantData`).then((res) =>
+    Axios.get(`https://project-ou-api.onrender.com/applicantData`).then((res) =>
       setListOfUsers(res.data)
     );
   });
