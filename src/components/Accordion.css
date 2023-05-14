@@ -31,14 +31,12 @@ body {
     justify-content: center;
     align-items: center;
   }
-  
+
   .h1 {
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
   line-height: 44px;
-  /* identical to box height, or 122% */
-
   letter-spacing: -0.02em;
   color: #000000;
   }
@@ -49,7 +47,6 @@ body {
   width: 30px;
   height: 30px;
   }
-
     .accordion-content {
       line-height: 1.5;
       width: 1052px;
