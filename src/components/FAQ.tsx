@@ -1,10 +1,10 @@
-import React from "react";
-import Accordion from "./Accordion";
+import React, {FC} from "react";
+import Accordion from "./Accordion.tsx";
 import "./Accordion.css";
 import { accordionData } from "./AccordionData.js";
 
 // faq page
-function FAQ() {
+const FAQ: FC = () => {
   return (
     <>
       <br></br>

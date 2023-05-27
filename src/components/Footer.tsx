@@ -1,8 +1,8 @@
-import React from "react";
+import React, {FC} from "react";
 import "./Footer.css";
 
 // footer
-function Footer() {
+const Footer: FC = () => {
   return (
     <>
       <div className="big-container">

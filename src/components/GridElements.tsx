@@ -1,8 +1,22 @@
-import React from "react";
+import React, {FC} from "react";
 import { NavLink } from "react-router-dom";
 
+interface GridItemsElement{
+  id: number;
+  path: string;
+  className: string;
+  image: string;
+  title: string;
+  text: string;
+}
+
+interface GridInfoProps{
+    gridInfo: GridItemsElement
+}
+
+
 //each grid element component
-function GridElements({ gridInfo }) {
+const GridElements: FC<GridInfoProps> = ({ gridInfo }) => {
   return (
     <NavLink to={gridInfo.path} target="_blank">
       <div class="course-notes">

@@ -1,9 +1,9 @@
-import React from "react";
-import Grids from "./Grids";
+import React, {FC} from "react";
+import {Grids} from "./";
 import Hero from "./Hero";
 
 // entire grid component on main page
-function Grid() {
+const Grid: FC = () => {
   const gridItems = [
     {
       id: 1,

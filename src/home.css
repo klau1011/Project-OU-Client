@@ -8,9 +8,7 @@
     height: 600px;
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    /* background-color: blue; */
 }
-/* overflow: hidden  children that leaves dimensensions hidden */
 /* pos: relatve -> child: absolute   -> allows overlapping in div */
 .grid > a > div {
     height: 100%;

@@ -1,14 +1,21 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, FC} from "react";
 import Axios from "axios";
 import "./ApplicantsData.css";
-import Applicant from "./Applicant";
+import {Applicant} from './index'
+
+
+interface User{
+  Program: string;
+  School: string;
+  Average: number;
+}
 
 // applicant data page
-function ApplicantsData() {
+const ApplicantsData: FC = () => {
   // states
-  const [listOfUsers, setListOfUsers] = useState([]);
-  const [search, setSearch] = useState("");
-  const [dropSearch, setDropSearch] = useState("UofT");
+  const [listOfUsers, setListOfUsers] = useState<Array<Object>>([]);
+  const [search, setSearch] = useState<string>("");
+  const [dropSearch, setDropSearch] = useState<string>("UofT");
 
   // LOCAL API:
   // http://localhost:3001/ApplicantData
@@ -36,7 +43,7 @@ function ApplicantsData() {
   };
 
   if (dropSearch in schools) {
-    filteredOnce = listOfUsers.filter((user) => {
+    filteredOnce = listOfUsers.filter((user:User) => {
       const schoolCriteria = schools[dropSearch];
       return schoolCriteria.some((criteria) =>
         user.School.toLowerCase().includes(criteria)
@@ -46,7 +53,7 @@ function ApplicantsData() {
 
   // filtered by user's dynamic search
   const filteredListOfUsers = filteredOnce.filter(
-    (user) =>
+    (user: User) =>
       user.Program.toLowerCase().includes(search.toLowerCase()) &&
       parseFloat(user.Average) <= 100
   );
@@ -56,7 +63,7 @@ function ApplicantsData() {
   let num = 0;
 
   // calculate the overall average for the program
-  filteredListOfUsers.forEach((user) => {
+  filteredListOfUsers.forEach((user: User) => {
     if (!isNaN(parseFloat(user.Average))) {
       sum += parseFloat(user.Average);
       num++;
@@ -119,8 +126,8 @@ function ApplicantsData() {
           {filteredListOfUsers.length < 1 && search !== "" ? (
             <h3>No results found for {search} </h3>
           ) : (
-            filteredListOfUsers.map((user) => (
-              <Applicant applicantInfo={user} />
+            filteredListOfUsers.map((user: User) => (
+              <Applicant Program={user.Program}  School={user.School} Average={user.Average}/>
             ))
           )}
         </div>

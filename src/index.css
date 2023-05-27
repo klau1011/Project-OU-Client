@@ -14,14 +14,12 @@ body {
     box-sizing: border-box; 
     margin: 0;
     padding: 0;
-    /* border: 1px solid blue; */
 }
 :root {
     --white: rgb(247, 247, 247);
     --black: rgb(14, 14, 14);
 }
 a {
-    /* rmeoves udnerline */
     text-decoration: none;
     color: var(--black);
 }
@@ -37,11 +35,6 @@ p {
     line-height: 150%;
 }
 
-/* trio = center chidl elements */
-/* display:flex = children in a row  */
-/* z:index = layer */
-
-/* justify-content: center is just center :space between takes up entire space  */
 nav {  
     background-color:var(--white);
     height: 70px;
