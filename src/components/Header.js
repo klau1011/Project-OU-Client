@@ -41,7 +41,7 @@ function Header() {
               className={({ isActive }) => (isActive ? "underline" : "")}
             >
               {" "}
-              21-22 Applicants Data{" "}
+              22-23 Applicants Data{" "}
             </NavLink>
             <NavLink
               to="/Admissions"
