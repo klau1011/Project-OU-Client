@@ -36,7 +36,7 @@ function Header() {
               Resources{" "}
             </NavLink>
             <NavLink
-              to="/22ApplicantsData"
+              to="/23ApplicantsData"
               key="3"
               className={({ isActive }) => (isActive ? "underline" : "")}
             >

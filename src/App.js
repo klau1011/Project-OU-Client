@@ -25,7 +25,7 @@ function App() {
           {/* routes to different webpages */}
           <Route path="/" element={<Grid />} />
           <Route path="/resources" element={<Resources />} />
-          <Route path="/22ApplicantsData" element={<ApplicantsData />}></Route>
+          <Route path="/23ApplicantsData" element={<ApplicantsData />}></Route>
           <Route path="/Admissions" element={<Guide />}></Route>
           <Route path="/FAQ" element={<FAQ />}></Route>
         </Routes>
