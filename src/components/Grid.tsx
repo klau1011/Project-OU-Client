@@ -1,6 +1,6 @@
 import React, {FC} from "react";
 import {Grids} from "./";
-import Hero from "./Hero";
+import Hero from "./Hero.tsx";
 
 // entire grid component on main page
 const Grid: FC = () => {

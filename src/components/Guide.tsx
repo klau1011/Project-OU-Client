@@ -55,7 +55,7 @@ function Guide() {
 
           <li>
             <strong>
-              VERY IMPORTANT FOR SUPP APPS -> Edit, edit, edit. Get a lot of
+              VERY IMPORTANT FOR SUPP APPS: Edit, edit, edit. Get a lot of
               people to proofread it.
             </strong>{" "}
             They could make or break your application being accepted.

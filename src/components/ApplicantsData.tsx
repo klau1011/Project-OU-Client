@@ -1,4 +1,4 @@
-import { useState, useEffect, FC} from "react";
+import React, { useState, useEffect, FC} from "react";
 import Axios from "axios";
 import "./ApplicantsData.css";
 import {Applicant} from './index'
@@ -43,7 +43,7 @@ const ApplicantsData: FC = () => {
   };
 
   if (dropSearch in schools) {
-    filteredOnce = listOfUsers.filter((user:User) => {
+    filteredOnce = listOfUsers.filter((user) => {
       const schoolCriteria = schools[dropSearch];
       return schoolCriteria.some((criteria) =>
         user.School.toLowerCase().includes(criteria)
@@ -53,7 +53,7 @@ const ApplicantsData: FC = () => {
 
   // filtered by user's dynamic search
   const filteredListOfUsers = filteredOnce.filter(
-    (user: User) =>
+    (user) =>
       user.Program.toLowerCase().includes(search.toLowerCase()) &&
       parseFloat(user.Average) <= 100
   );
@@ -105,7 +105,7 @@ const ApplicantsData: FC = () => {
               <option value="Laurier">Laurier</option>
               <option value="York">York</option>
             </select>
-            <i class="arrow down"></i>
+            <i className="arrow down"></i>
           </div>
         </div>
         {/* output */}
@@ -126,7 +126,7 @@ const ApplicantsData: FC = () => {
           {filteredListOfUsers.length < 1 && search !== "" ? (
             <h3>No results found for {search} </h3>
           ) : (
-            filteredListOfUsers.map((user: User) => (
+            filteredListOfUsers.map((user) => (
               <Applicant Program={user.Program}  School={user.School} Average={user.Average}/>
             ))
           )}

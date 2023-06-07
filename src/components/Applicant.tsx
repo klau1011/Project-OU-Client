@@ -1,10 +1,10 @@
 import React, {FC} from "react";
 import "./ApplicantsData.css";
 
-interface ApplicantProps {
-  Program: String;
-  School: String;
-  Average: Number;
+type ApplicantProps = {
+  Program: string;
+  School: string;
+  Average: number;
 }
 
 // individual applicant card

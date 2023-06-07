@@ -1,7 +1,7 @@
 import React, {FC} from "react";
 import Accordion from "./Accordion.tsx";
 import "./Accordion.css";
-import { accordionData } from "./AccordionData.js";
+import { accordionData } from "./AccordionData.tsx";
 
 // faq page
 const FAQ: FC = () => {
