@@ -15,6 +15,7 @@ const ApplicantsData: FC = () => {
   // states
   const [listOfUsers, setListOfUsers] = useState<Array<Object>>([]);
   const [search, setSearch] = useState<string>("");
+  const [year, setYear] = useState<number>(2022)
   const [dropSearch, setDropSearch] = useState<string>("UofT");
 
   // LOCAL API:
@@ -80,8 +81,8 @@ const ApplicantsData: FC = () => {
       <br></br>
       <br></br>
       {/* header */}
-      <div className="container">
-        <h1 id="data-header">2022-2023 Ontario Applicants Data</h1>
+      <div className="body-container">
+        <h1>2022-2023 Ontario Applicants Data</h1>
         {/* search input */}
         <div className="search-container">
           <input
@@ -121,7 +122,6 @@ const ApplicantsData: FC = () => {
         ) : (
           ""
         )}
-
         <div className="cards">
           {filteredListOfUsers.length < 1 && search !== "" ? (
             <h3>No results found for {search} </h3>

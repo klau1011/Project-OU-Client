@@ -1,9 +1,16 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.body-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+.search-container{
+  position: relative;
+  display: flex;
+  width: 1050px;
+  margin: 0 0 60px 0;
+}
+
 h1 {
     margin: 0 0 30px 0;
 }
@@ -17,12 +24,6 @@ h1 {
     border: 1px solid #D0CFCE;
     outline: none;
     font-family: 'Inter', sans-serif;
-}
-.search-container{
-    position: relative;
-    width: 1100px;
-  margin: 0 0 60px 0;
-  display: flex;
 }
 
 .cards{
@@ -62,33 +63,20 @@ h1 {
 }
 
 .uni-select{
-    position: absolute;
     right: 0px;
 }
 
-:root {
-    --background-gradient: linear-gradient(30deg, #f39c12 30%, #f1c40f);
-    --gray: #34495e;
-    --peach: peachpuff;
-  }
-  
   select {
     font-family: 'Inter', sans-serif;
     appearance: none;
-    outline: 0;
-    border: 0;
-    box-shadow: none;
     flex: 1;
     padding: 13px 16px;
     color: #f2f2f2;
-    background-color: var(--gray);
+    background-color: #34495e;
     background-image: none;
     cursor: pointer;
-
   }
-  select::-ms-expand {
-    display: none;
-  }
+  
     .uni-select {
     right: 0px;
     position: absolute;
@@ -120,7 +108,6 @@ h1 {
     padding: 3px;
     right: 15px;
     top: 40%;
-
   }
   .down {
     transform: rotate(45deg);
@@ -132,3 +119,5 @@ h1 {
   #avg{
     color: green;
   }
+
+ 
