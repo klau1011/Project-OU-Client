@@ -17,11 +17,11 @@ const Grid: FC = () => {
 
     {
       id: 2,
-      path: "/22ApplicantsData",
+      path: "/23ApplicantsData",
       className: "Applicants-Data",
       image:
         "https://cdn.discordapp.com/attachments/715319623637270638/959935257329696808/unknown.png",
-      title: "2021-2022 Admissions Data",
+      title: "2022-2023 Admissions Data",
       text: "Acceptance stats",
     },
     {

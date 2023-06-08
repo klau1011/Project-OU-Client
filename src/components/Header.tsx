@@ -37,12 +37,12 @@ function Header() {
               Resources{" "}
             </NavLink>
             <NavLink
-              to="/22ApplicantsData"
+              to="/23ApplicantsData"
               key="3"
               className={({ isActive }) => (isActive ? "underline" : "")}
             >
               {" "}
-              21-22 Applicants Data{" "}
+              22-23 Applicants Data{" "}
             </NavLink>
             <NavLink
               to="/Admissions"

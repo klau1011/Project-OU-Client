@@ -22,8 +22,8 @@ const ApplicantsData: FC = () => {
 
   // fetch data from backend api end point
   useEffect(() => {
-    Axios.get(`https://project-ou-api.onrender.com/applicantData22`).then((res) =>
-      setListOfUsers(res.data)
+    Axios.get(`https://project-ou-api.onrender.com/applicantData23`).then(
+      (res) => setListOfUsers(res.data)
     );
   });
 
@@ -81,7 +81,7 @@ const ApplicantsData: FC = () => {
       <br></br>
       {/* header */}
       <div className="container">
-        <h1 id="data-header">2021-2022 Ontario Applicants Data</h1>
+        <h1 id="data-header">2022-2023 Ontario Applicants Data</h1>
         {/* search input */}
         <div className="search-container">
           <input
