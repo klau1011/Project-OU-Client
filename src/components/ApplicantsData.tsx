@@ -1,4 +1,4 @@
-import React, { useState, useEffect, FC} from "react";
+import React, { useState, useEffect, FC, ChangeEvent} from "react";
 import Axios from "axios";
 import "./ApplicantsData.css";
 import {Applicant} from './index'
@@ -22,7 +22,7 @@ const ApplicantsData: FC = () => {
 
   // fetch data from backend api end point
   useEffect(() => {
-    Axios.get(`https://project-ou-api.onrender.com/applicantData`).then((res) =>
+    Axios.get(`https://project-ou-api.onrender.com/applicantData22`).then((res) =>
       setListOfUsers(res.data)
     );
   });
@@ -88,10 +88,10 @@ const ApplicantsData: FC = () => {
             type="text"
             id="search-bar"
             placeholder="Find a program..."
-            onChange={(e) => setSearch(e.target.value)}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => setSearch(e.target.value)}
           ></input>
           <div className="uni-select">
-            <select onChange={(e) => setDropSearch(e.target.value)}>
+            <select onChange={(e: ChangeEvent<HTMLSelectElement>) => setDropSearch(e.target.value)}>
               <option value="Select" disabled>
                 University:
               </option>
