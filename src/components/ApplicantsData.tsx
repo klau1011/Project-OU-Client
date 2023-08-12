@@ -22,11 +22,11 @@ const ApplicantsData: FC = () => {
   // http://localhost:3001/ApplicantData
 
   // fetch data from backend api end point
-  useEffect(() => {
-    Axios.get(`https://project-ou-api.onrender.com/applicantData23`).then(
-      (res) => setListOfUsers(res.data)
-    );
-  });
+    useEffect(() => {    
+      Axios.get(process.env.REACT_APP_API_URL).then(
+        (res) => setListOfUsers(res.data)
+      );
+    });
 
   let filteredOnce = listOfUsers;
 
@@ -47,7 +47,7 @@ const ApplicantsData: FC = () => {
     filteredOnce = listOfUsers.filter((user) => {
       const schoolCriteria = schools[dropSearch];
       return schoolCriteria.some((criteria) =>
-        user.School.toLowerCase().includes(criteria)
+        (user as User).School.toLowerCase().includes(criteria)
       );
     });
   }
@@ -55,7 +55,7 @@ const ApplicantsData: FC = () => {
   // filtered by user's dynamic search
   const filteredListOfUsers = filteredOnce.filter(
     (user) =>
-      user.Program.toLowerCase().includes(search.toLowerCase()) &&
+      (user).Program.toLowerCase().includes(search.toLowerCase()) &&
       parseFloat(user.Average) <= 100
   );
 
@@ -127,7 +127,7 @@ const ApplicantsData: FC = () => {
             <h3>No results found for {search} </h3>
           ) : (
             filteredListOfUsers.map((user) => (
-              <Applicant Program={user.Program}  School={user.School} Average={user.Average}/>
+              <Applicant Program={(user as User).Program}  School={(user as User).School} Average={(user as User).Average}/>
             ))
           )}
         </div>
