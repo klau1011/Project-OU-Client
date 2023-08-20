@@ -22,7 +22,7 @@ const ApplicantsData: FC = () => {
   // http://localhost:3001/ApplicantData
 
   // fetch data from backend api end point
-    useEffect(() => {    
+    useEffect(() => {          
       Axios.get(process.env.REACT_APP_API_URL).then(
         (res) => setListOfUsers(res.data)
       );
@@ -35,7 +35,7 @@ const ApplicantsData: FC = () => {
     UofT: ["toronto", "uoft", "uft"],
     Waterloo: ["waterloo", "uw"],
     McMaster: ["mcmaster", "mac"],
-    "Queen's": ["queen"],
+    "Queen's": ["queen", "queen's"],
     UOttawa: ["ottawa"],
     Carleton: ["carleton"],
     Ryerson: ["ryerson", "tmu"],
