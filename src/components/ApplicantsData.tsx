@@ -75,11 +75,6 @@ const ApplicantsData: FC = () => {
 
   return (
     <>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
       {/* header */}
       <div className="body-container">
         <h1>2022-2023 Ontario Applicants Data</h1>

@@ -1,19 +1,14 @@
 import React, {FC} from "react";
 import Accordion from "./Accordion.tsx";
 import "./Accordion.css";
+import "./FAQ.css"
 import { accordionData } from "./AccordionData.tsx";
 
 // faq page
 const FAQ: FC = () => {
   return (
     <>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-
-      <div className="horizontal-bar"></div>
+      <div className="body-container">
       <div className="dropContainer">
         <h1 id="faq">FAQ</h1>
 
@@ -23,24 +18,7 @@ const FAQ: FC = () => {
           ))}
         </div>
       </div>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
+      </div>
     </>
   );
 }
