@@ -1,9 +1,20 @@
-p{
-    color: #404040;
+p {
+  color: #404040;
 }
 
- li > a {
-        text-decoration: none;
-        border-bottom: #EA215A 0.125em solid;
-      }
+li > a {
+  text-decoration: none;
+  border-bottom: #CCCCCC 0.125em solid; /* Light gray underline */
+  transition: border-color 0.3s;
+}
 
+li > a:hover {
+  border-color: #FFD700; /* Change the border color to desired highlight color */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}

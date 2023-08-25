@@ -4,11 +4,6 @@ import "./Guide.css";
 function Guide() {
   return (
     <>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
       <div className="blog-container">
         <h1 id="blog-title">A guide to your grade 12 year</h1>
 

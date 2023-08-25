@@ -6,12 +6,6 @@ import Footer from "./index";
 function Resources() {
   return (
     <>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-
       <div className="container">
         <h1>Resources</h1>
         <p>Useful external resources</p>
@@ -61,16 +55,6 @@ function Resources() {
           </a>{" "}
           for the sciences and maths
         </li>
-
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
       </div>
     </>
   );
