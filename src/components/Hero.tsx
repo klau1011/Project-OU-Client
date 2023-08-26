@@ -9,6 +9,7 @@ function Hero() {
         <img
           src="https://cdn.discordapp.com/attachments/763407821701382154/959935273020583996/download__2_-removebg-preview.png"
           id="notebook"
+          alt="OU Notebook Icon"
         />
       </section>
     </>
