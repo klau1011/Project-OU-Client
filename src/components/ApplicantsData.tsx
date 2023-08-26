@@ -1,8 +1,6 @@
-import React, { useState, useEffect, FC, ChangeEvent} from "react";
-import Axios from "axios";
+import React, { useState, useEffect, FC, ChangeEvent, useMemo} from "react";
 import "./ApplicantsData.css";
 import {Applicant} from './index'
-
 
 interface User{
   Program: string;
@@ -18,40 +16,43 @@ const ApplicantsData: FC = () => {
   const [year, setYear] = useState<number>(2022)
   const [dropSearch, setDropSearch] = useState<string>("UofT");
 
+    // filtered by uni data
+    const schools = {
+      UofT: ["toronto", "uoft", "uft"],
+      Waterloo: ["waterloo", "uw"],
+      McMaster: ["mcmaster", "mac"],
+      "Queen's": ["queen", "queen's"],
+      UOttawa: ["ottawa"],
+      Carleton: ["carleton"],
+      Ryerson: ["ryerson", "tmu"],
+      Laurier: ["laurier", "wlu", "wilfred"],
+      York: ["york"],
+    };
+  
+
   // LOCAL API:
   // http://localhost:3001/ApplicantData
 
   // fetch data from backend api end point
     useEffect(() => {          
-      Axios.get(process.env.REACT_APP_API_URL).then(
-        (res) => setListOfUsers(res.data)
-      );
+      const fetchData = async () => {
+        const response = await fetch(process.env.REACT_APP_API_URL)
+        const data = await response.json()
+        setListOfUsers(data)
+      }
+      fetchData()
     });
 
-  let filteredOnce = listOfUsers;
-
-  // filtered by uni data
-  const schools = {
-    UofT: ["toronto", "uoft", "uft"],
-    Waterloo: ["waterloo", "uw"],
-    McMaster: ["mcmaster", "mac"],
-    "Queen's": ["queen", "queen's"],
-    UOttawa: ["ottawa"],
-    Carleton: ["carleton"],
-    Ryerson: ["ryerson", "tmu"],
-    Laurier: ["laurier", "wlu", "wilfred"],
-    York: ["york"],
-  };
-
-  if (dropSearch in schools) {
-    filteredOnce = listOfUsers.filter((user) => {
+    const filteredOnce: Object[] = useMemo(() => {
       const schoolCriteria = schools[dropSearch];
-      return schoolCriteria.some((criteria) =>
-        (user as User).School.toLowerCase().includes(criteria)
+      return listOfUsers.filter((user) =>
+        schoolCriteria.some((criteria) =>
+          (user as User).School.toLowerCase().includes(criteria)
+        )
       );
-    });
-  }
-
+    }, [dropSearch, listOfUsers]);
+    
+  
   // filtered by user's dynamic search
   const filteredListOfUsers = filteredOnce.filter(
     (user) =>
@@ -65,7 +66,7 @@ const ApplicantsData: FC = () => {
 
   // calculate the overall average for the program
   filteredListOfUsers.forEach((user: User) => {
-    if (!isNaN(parseFloat(user.Average))) {
+    if (!isNaN(user.Average)) {
       sum += parseFloat(user.Average);
       num++;
     }

@@ -1,6 +1,5 @@
 import React from "react";
 import "./Resources.css";
-import Footer from "./index";
 
 // resources page
 function Resources() {
