@@ -1,4 +1,5 @@
 import React, { useState, useEffect, FC, ChangeEvent, useMemo} from "react";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import "./ApplicantsData.css";
 import {Applicant} from './index'
 
@@ -28,21 +29,35 @@ const ApplicantsData: FC = () => {
       Laurier: ["laurier", "wlu", "wilfred"],
       York: ["york"],
     };
-  
+
+    const fetchData = async () => {
+      const response = await fetch(process.env.REACT_APP_API_URL)
+      const data = await response.json()
+      return data
+    }
+
+    const queryClient = useQueryClient()
+
+    const admissionsQuery = useQuery({
+      queryKey: ["admissions"],
+      queryFn: fetchData,
+    })
+
 
   // LOCAL API:
   // http://localhost:3001/ApplicantData
 
   // fetch data from backend api end point
-    useEffect(() => {          
-      const fetchData = async () => {
-        const response = await fetch(process.env.REACT_APP_API_URL)
-        const data = await response.json()
-        setListOfUsers(data)
+  useEffect(() => {
+     (async() => {
+      if( admissionsQuery.status === 'success' && admissionsQuery.data ){
+       setListOfUsers(admissionsQuery.data)
       }
-      fetchData()
-    });
+     })()
+  
+  }, [admissionsQuery.data]);
 
+  console.log(listOfUsers)
     const filteredOnce: Object[] = useMemo(() => {
       const schoolCriteria = schools[dropSearch];
       return listOfUsers.filter((user) =>
@@ -54,11 +69,11 @@ const ApplicantsData: FC = () => {
     
   
   // filtered by user's dynamic search
-  const filteredListOfUsers = filteredOnce.filter(
+  const filteredListOfUsers = useMemo(() => filteredOnce.filter(
     (user) =>
-      (user).Program.toLowerCase().includes(search.toLowerCase()) &&
+      (user).Program.toLowerCase().includes(search.toLowerCase().trim()) &&
       parseFloat(user.Average) <= 100
-  );
+  ), [search, dropSearch, listOfUsers]);
 
   // calculate average for each program
   let sum = 0;
@@ -113,17 +128,13 @@ const ApplicantsData: FC = () => {
         </div>
         {/* display count */}
         <h6>Count: {!isNaN(avg) && num}</h6>
-        {filteredListOfUsers.length < 1 && search === "" ? (
-          <p>Loading data...</p>
-        ) : (
-          ""
-        )}
+        {admissionsQuery.isLoading && <p>Loading data...</p>}
         <div className="cards">
           {filteredListOfUsers.length < 1 && search !== "" ? (
             <h3>No results found for {search} </h3>
           ) : (
-            filteredListOfUsers.map((user) => (
-              <Applicant Program={(user as User).Program}  School={(user as User).School} Average={(user as User).Average}/>
+            filteredListOfUsers.map((user, index) => (
+              <Applicant key={index} Program={(user as User).Program}  School={(user as User).School} Average={(user as User).Average}/>
             ))
           )}
         </div>
